@@ -1,0 +1,21 @@
+{
+	"name": "LS_LocalSQLServer",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "SUKHJEEVAN",
+			"database": "mydbadvworks",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "db_sukh",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIxNjJhM2VkNS1mMzI0LTQ3YzItODE5Ny0yMzhlNTBlODIzOTUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SHIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
