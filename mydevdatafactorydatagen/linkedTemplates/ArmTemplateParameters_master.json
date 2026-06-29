@@ -1,0 +1,66 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "mydevdatafactorydatagen"
+		},
+		"AzureDataLakeStorageLS_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabaseLS_password": {
+			"value": ""
+		},
+		"LS_ADLS_Source_New_accountKey": {
+			"value": ""
+		},
+		"LS_LocalSQLServer_password": {
+			"value": ""
+		},
+		"LS_SQL_Source_New_password": {
+			"value": ""
+		},
+		"AzureDataLakeStorageLS_properties_typeProperties_url": {
+			"value": "https://mystorageaccdevcode.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabaseLS_properties_typeProperties_server": {
+			"value": "mydevserverpoc.database.windows.net"
+		},
+		"AzureSqlDatabaseLS_properties_typeProperties_database": {
+			"value": "adventureworks"
+		},
+		"AzureSqlDatabaseLS_properties_typeProperties_userName": {
+			"value": "dbadmin"
+		},
+		"LS_ADLS_Source_New_properties_typeProperties_url": {
+			"value": "https://mystorageaccdevcode.dfs.core.windows.net/"
+		},
+		"LS_LocalSQLServer_properties_typeProperties_server": {
+			"value": "SUKHJEEVAN"
+		},
+		"LS_LocalSQLServer_properties_typeProperties_database": {
+			"value": "mydbadvworks"
+		},
+		"LS_LocalSQLServer_properties_typeProperties_userName": {
+			"value": "db_sukh"
+		},
+		"LS_RestAPI_properties_typeProperties_url": {
+			"value": "https://jsonplaceholder.typicode.com/"
+		},
+		"LS_SQL_Source_New_properties_typeProperties_server": {
+			"value": "mydevserverpoc.database.windows.net"
+		},
+		"LS_SQL_Source_New_properties_typeProperties_database": {
+			"value": "adventureworks"
+		},
+		"LS_SQL_Source_New_properties_typeProperties_userName": {
+			"value": "dbadmin"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
