@@ -25,7 +25,12 @@
 				"     order: 0,",
 				"     allowSchemaDrift: true) ~> input1",
 				"input1 derive(DateTime = currentTimestamp()) ~> derivedColumn1",
-				"derivedColumn1 output() ~> output1"
+				"derivedColumn1 output(mapColumn(",
+				"          EId,",
+				"          Name,",
+				"          DepartmentID,",
+				"          DateTime",
+				"     )) ~> output1"
 			]
 		}
 	}
