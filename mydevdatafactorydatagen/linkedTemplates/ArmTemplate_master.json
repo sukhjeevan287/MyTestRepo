@@ -114,9 +114,6 @@
 					"LS_SQL_Source_New_password": {
 						"value": "[parameters('LS_SQL_Source_New_password')]"
 					},
-					"LS_LocalSQLServer_password": {
-						"value": "[parameters('LS_LocalSQLServer_password')]"
-					},
 					"AzureDataLakeStorageLS_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorageLS_properties_typeProperties_url')]"
 					},
@@ -143,15 +140,6 @@
 					},
 					"LS_SQL_Source_New_properties_typeProperties_userName": {
 						"value": "[parameters('LS_SQL_Source_New_properties_typeProperties_userName')]"
-					},
-					"LS_LocalSQLServer_properties_typeProperties_server": {
-						"value": "[parameters('LS_LocalSQLServer_properties_typeProperties_server')]"
-					},
-					"LS_LocalSQLServer_properties_typeProperties_database": {
-						"value": "[parameters('LS_LocalSQLServer_properties_typeProperties_database')]"
-					},
-					"LS_LocalSQLServer_properties_typeProperties_userName": {
-						"value": "[parameters('LS_LocalSQLServer_properties_typeProperties_userName')]"
 					}
 				}
 			},
@@ -170,11 +158,43 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"LS_LocalSQLServer_password": {
+						"value": "[parameters('LS_LocalSQLServer_password')]"
+					},
+					"LS_LocalSQLServer_properties_typeProperties_server": {
+						"value": "[parameters('LS_LocalSQLServer_properties_typeProperties_server')]"
+					},
+					"LS_LocalSQLServer_properties_typeProperties_database": {
+						"value": "[parameters('LS_LocalSQLServer_properties_typeProperties_database')]"
+					},
+					"LS_LocalSQLServer_properties_typeProperties_userName": {
+						"value": "[parameters('LS_LocalSQLServer_properties_typeProperties_userName')]"
 					}
 				}
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'mydevdatafactorydatagen_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "mydevdatafactorydatagen_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'mydevdatafactorydatagen_ArmTemplate_1')]"
 			]
 		}
 	]
