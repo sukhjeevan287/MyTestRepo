@@ -1,0 +1,23 @@
+{
+	"name": "DS_Joined_Employee_Dept",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorageLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "dept_employee.csv",
+				"fileSystem": "output"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
