@@ -22,7 +22,7 @@
 							"SalesDate": {
 								"type": "DateTime",
 								"value": {
-									"value": "@pipeline().parameters.RunDate",
+									"value": "@utcNow()",
 									"type": "Expression"
 								}
 							}
@@ -63,7 +63,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"RunDateDataset": {
-								"value": "@pipeline().parameters.RunDate",
+								"value": "@utcNow()",
 								"type": "Expression"
 							}
 						}
@@ -71,11 +71,6 @@
 				]
 			}
 		],
-		"parameters": {
-			"RunDate": {
-				"type": "string"
-			}
-		},
 		"annotations": []
 	}
 }
