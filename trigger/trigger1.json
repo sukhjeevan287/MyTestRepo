@@ -2,7 +2,7 @@
 	"name": "trigger1",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [
 			{
 				"pipelineReference": {
@@ -14,7 +14,7 @@
 		"type": "ScheduleTrigger",
 		"typeProperties": {
 			"recurrence": {
-				"frequency": "Month",
+				"frequency": "Day",
 				"interval": 15,
 				"startTime": "2026-07-06T16:05:00",
 				"endTime": "2026-07-07T16:05:00",
@@ -25,9 +25,6 @@
 					],
 					"hours": [
 						11
-					],
-					"monthDays": [
-						1
 					]
 				}
 			}
