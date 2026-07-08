@@ -75,7 +75,7 @@
 			"type": "string",
 			"defaultValue": "dbadmin"
 		},
-		"EventBasedTrigger_properties_typeProperties_scope": {
+		"storage_event_based_trigger_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/e21b71f0-12fa-439c-86e6-40692581d6f2/resourceGroups/adfdataeve/providers/Microsoft.Storage/storageAccounts/mystorageaccdevcode"
 		},
@@ -175,8 +175,8 @@
 					"LS_LocalSQLServer_properties_typeProperties_userName": {
 						"value": "[parameters('LS_LocalSQLServer_properties_typeProperties_userName')]"
 					},
-					"EventBasedTrigger_properties_typeProperties_scope": {
-						"value": "[parameters('EventBasedTrigger_properties_typeProperties_scope')]"
+					"storage_event_based_trigger_properties_typeProperties_scope": {
+						"value": "[parameters('storage_event_based_trigger_properties_typeProperties_scope')]"
 					}
 				}
 			},

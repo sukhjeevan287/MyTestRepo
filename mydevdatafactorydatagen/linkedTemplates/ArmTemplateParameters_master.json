@@ -56,7 +56,7 @@
 		"LS_SQL_Source_New_properties_typeProperties_userName": {
 			"value": "dbadmin"
 		},
-		"EventBasedTrigger_properties_typeProperties_scope": {
+		"storage_event_based_trigger_properties_typeProperties_scope": {
 			"value": "/subscriptions/e21b71f0-12fa-439c-86e6-40692581d6f2/resourceGroups/adfdataeve/providers/Microsoft.Storage/storageAccounts/mystorageaccdevcode"
 		},
 		"containerUri": {

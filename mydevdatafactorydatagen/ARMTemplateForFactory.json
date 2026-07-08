@@ -75,7 +75,7 @@
 			"type": "string",
 			"defaultValue": "dbadmin"
 		},
-		"EventBasedTrigger_properties_typeProperties_scope": {
+		"storage_event_based_trigger_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/e21b71f0-12fa-439c-86e6-40692581d6f2/resourceGroups/adfdataeve/providers/Microsoft.Storage/storageAccounts/mystorageaccdevcode"
 		}
@@ -2907,36 +2907,6 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/EventBasedTrigger')]",
-			"type": "Microsoft.DataFactory/factories/triggers",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"runtimeState": "Stopped",
-				"pipelines": [
-					{
-						"pipelineReference": {
-							"referenceName": "EventBasedTriggerDemo",
-							"type": "PipelineReference"
-						},
-						"parameters": {}
-					}
-				],
-				"type": "BlobEventsTrigger",
-				"typeProperties": {
-					"blobPathBeginsWith": "/inputdata/blobs/",
-					"ignoreEmptyBlobs": true,
-					"scope": "[parameters('EventBasedTrigger_properties_typeProperties_scope')]",
-					"events": [
-						"Microsoft.Storage.BlobCreated"
-					]
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/pipelines/EventBasedTriggerDemo')]"
-			]
-		},
-		{
 			"name": "[concat(parameters('factoryName'), '/trigger1')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
 			"apiVersion": "2018-06-01",
@@ -3243,6 +3213,38 @@
 				"[concat(variables('factoryId'), '/datasets/DS_Employee_New')]",
 				"[concat(variables('factoryId'), '/datasets/DS_Department_New')]",
 				"[concat(variables('factoryId'), '/datasets/DS_Joined_Employee_Dept')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/storage_event_based_trigger')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "EventBasedTriggerDemo",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
+					}
+				],
+				"type": "BlobEventsTrigger",
+				"typeProperties": {
+					"blobPathBeginsWith": "/inputdata/blobs/",
+					"blobPathEndsWith": ".csv",
+					"ignoreEmptyBlobs": true,
+					"scope": "[parameters('storage_event_based_trigger_properties_typeProperties_scope')]",
+					"events": [
+						"Microsoft.Storage.BlobDeleted",
+						"Microsoft.Storage.BlobCreated"
+					]
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/EventBasedTriggerDemo')]"
 			]
 		}
 	]
