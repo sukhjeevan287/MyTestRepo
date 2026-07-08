@@ -13,7 +13,7 @@
 		],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
-			"blobPathBeginsWith": "/inputdata/blobs/input/",
+			"blobPathBeginsWith": "/inputdata/blobs/",
 			"blobPathEndsWith": ".csv",
 			"ignoreEmptyBlobs": false,
 			"scope": "/subscriptions/e21b71f0-12fa-439c-86e6-40692581d6f2/resourceGroups/adfdataeve/providers/Microsoft.Storage/storageAccounts/mystorageaccdevcode",
